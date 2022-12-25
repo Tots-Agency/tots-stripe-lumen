@@ -1,6 +1,6 @@
 <?php
 
-namespace Tots\Auth\Providers;
+namespace Tots\Stripe\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Tots\Stripe\Services\TotsStripeService;
