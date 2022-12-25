@@ -26,7 +26,7 @@ class TotsStripeService
      * @param string $cancelUrl
      * @return void
      */
-    public function createModeSessionCheckout($customerId, $successUrl, $cancelUrl)
+    public function createModeSetupSessionCheckout($customerId, $successUrl, $cancelUrl)
     {
         return \Stripe\Checkout\Session::create([
             'payment_method_types' => ['card'],
