@@ -80,4 +80,36 @@ class TotsStripeService
             'enabled_events' => $events,
         ]);
     }
+    /**
+     * Obtiene el customer desde Stripe
+     * 
+     * @param string $customerId
+     * @return void
+     */
+    public function getCustomerById($customerId)
+    {
+        return $this->stripe->customers->retrieve($customerId);
+    }
+    /**
+     * Crear un customer en stripe
+     *
+     * @param string $name
+     * @return void
+     */
+    public function createCustomerByName($name)
+    {
+        return $this->stripe->customers->create([
+            'name' => $name,
+        ]);
+    }
+    /**
+     * Crear un customer en stripe
+     *
+     * @param array $params
+     * @return void
+     */
+    public function createCustomer($params)
+    {
+        return $this->stripe->customers->create($params);
+    }
 }
