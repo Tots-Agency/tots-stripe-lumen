@@ -67,6 +67,16 @@ class TotsStripeService
         return $this->stripe->paymentMethods->all(['customer' => $customerId, 'type' => 'card']);
     }
     /**
+     * Elimina una medio de pago
+     *
+     * @param string $paymentMethodId
+     * @return object
+     */
+    public function removePaymentMethodById($paymentMethodId)
+    {
+        return $this->stripe->paymentMethods->detach($paymentMethodId);
+    }
+    /**
      * Crea un webhook
      *
      * @param array $events
