@@ -84,7 +84,7 @@ class TotsStripeService
      * Obtiene el customer desde Stripe
      * 
      * @param string $customerId
-     * @return void
+     * @return \Stripe\Customer
      */
     public function getCustomerById($customerId)
     {
@@ -94,7 +94,7 @@ class TotsStripeService
      * Crear un customer en stripe
      *
      * @param string $name
-     * @return void
+     * @return \Stripe\Customer
      */
     public function createCustomerByName($name)
     {
@@ -106,7 +106,7 @@ class TotsStripeService
      * Crear un customer en stripe
      *
      * @param array $params
-     * @return void
+     * @return \Stripe\Customer
      */
     public function createCustomer($params)
     {
